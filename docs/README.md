@@ -22,8 +22,8 @@ Para la implementación del componente en React se explican en los siguientes pa
 1. Desarrollamos una Clase [Api.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Api/Api.ts) para consultar el EndPonit donde se verifica si el correo digitado esta registrado en la lista de suscripciones.
 2. Implementamos un componente [ButtonEmail.tsx](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/ButtonEmail.tsx) que ejecuta las función handleChange en el onChange, que permite enviar la variable email al componente Padre para sus respectivas validaciones. Tambien, dentro de este componente se
 ejecuta la función handleSend la cual permite enviar a la Api la variable email para verificarla en el endpoit, o en el localstore su existencia.
-3. El componente Padre contiene todas las variables de inicio, como las funciones principales, [Subscriptions](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Subscriptions.tsx), 
-4.Los componentes anteriores se ubicaron dentro del Modal para persistir en la tienda, hasta que se cerrará la ventana o el cliente tomará la suscripción.
+3. El componente Padre contiene todas las variables de inicio, como las funciones principales, [Subscriptions](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Subscriptions.tsx).
+4. Los componentes anteriores se ubicaron dentro del Modal para persistir en la tienda, hasta que se cerrará la ventana o el cliente tomará la suscripción.
 
 ## Conclusiones 
 Para obtener los resultados anteriores se consultó en la documentación de los siguientes link:
