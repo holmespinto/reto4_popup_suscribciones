@@ -19,14 +19,14 @@ Para desarrollar el componente se tuvo en cuenta la configuración del schema en
 
 Para la implementación del componente se explican los siguientes pasos:
 
-1. Se desarrollo una Clase [Api.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Api/Api.ts) para consultar el EndPonit donde se verifica si el correo digitado esta registrado en la oferta;
-2. Se Implemento un componente [ButtonEmail.tsx](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/ButtonEmail.tsx) que ejecuta las funcion handleChange en el onChange, que permite enviar la variable email al componente padre para sus respectivas validaciones. Tambien, dentro de este componente se
-ejecuta la funcion handleSend la cual permite enviar a la Api la variable email para verificarla en el endpoit, o en el localstore su existencia.
-3. El componente padre contiene todas las variables de inicio, como las funciones principales, [Subscriptions](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Subscriptions.tsx), 
+1. Desarrollamos una Clase [Api.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Api/Api.ts) para consultar el EndPonit donde se verifica si el correo digitado esta registrado en la lista de suscripciones.
+2. Implementamos un componente [ButtonEmail.tsx](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/ButtonEmail.tsx) que ejecuta las función handleChange en el onChange, que permite enviar la variable email al componente Padre para sus respectivas validaciones. Tambien, dentro de este componente se
+ejecuta la función handleSend la cual permite enviar a la Api la variable email para verificarla en el endpoit, o en el localstore su existencia.
+3. El componente Padre contiene todas las variables de inicio, como las funciones principales, [Subscriptions](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Subscriptions.tsx), 
 4.Los componentes anteriores se ubicaron dentro del Modal para persistir en la tienda, hasta que se cerrará la ventana o el cliente tomará la suscripción.
 
 ## Conclusiones 
-Para obtener los resultados se consultó en la documentación de los siguientes link:
+Para obtener los resultados anteriores se consultó en la documentación de los siguientes link:
 - [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms). 
 - [css-handles](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization)
 - [react-jsonschema](https://react-jsonschema-form.readthedocs.io/en/latest/)
