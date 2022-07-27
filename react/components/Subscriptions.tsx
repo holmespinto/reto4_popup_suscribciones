@@ -30,7 +30,7 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
   const [variation, setVariation] = React.useState('primary')
   const [alert, setAlert] = useState({
     mensaje: '',
-    class: '',
+    class: 'inicial',
   })
 
   const handles = useCssHandles(CSS_HANDLES)
@@ -39,6 +39,7 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
     target: { value: eventValue },
   }) => {
     setEmail(eventValue)
+    console.log('alert', eventValue)
   }
 
   // funcion handleCloseModal
@@ -67,11 +68,18 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
             class: 'warning',
           })
           setVariation('danger')
-          localStorage.setItem('PopupClosed', 'close')
+          // localStorage.setItem('PopupClosed', 'close')
+        } else if (localStorage.getItem('RegitrarEmail') === email) {
+          setAlert({
+            mensaje:
+              'El usuario ya estás registrado en, la Base Local, de esta promoción',
+            class: 'danger',
+          })
+          setVariation('danger')
         } else {
           setAlert({
-            mensaje: 'Felicitaciones!!, Fue registrado en la promición',
-            class: 'warning',
+            mensaje: 'Felicitaciones!!, Usted fue registrado en la promición',
+            class: 'success',
           })
           /* REGISTRAMOS EL EMAIL DEL USUARIO */
           localStorage.setItem('RegitrarEmail', `${email}`)
@@ -87,7 +95,7 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
     hasError
       ? setAlert({
           class: 'success',
-          mensaje: 'Email escrito correctamente',
+          mensaje: 'Email digitado correctamente',
         })
       : setAlert({
           class: 'warning',
@@ -99,9 +107,10 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
   // PARA NO MOSTRARLO EN LA TIENDA
   useEffect(() => {
     localStorage.getItem('PopupClosed') === 'close'
-      ? setModal({ isModalOpen: true })
-      : setModal({ isModalOpen: false })
+      ? setModal({ isModalOpen: false })
+      : setModal({ isModalOpen: true })
   }, [])
+  console.log('alert.class', alert.class, email)
 
   return (
     <React.Fragment>
@@ -114,14 +123,14 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
               background: '#fafafa',
             }}
           >
-            {alert.class ? (
-              alert.class === 'success' ? (
-                <Alert type="success">{alert.mensaje}</Alert>
-              ) : (
-                <Alert type="warning">{alert.mensaje}</Alert>
-              )
+            {!email ? (
+              <Alert type="warning">
+                {'Suscribete con tu email para participar en la oferta!!'}
+              </Alert>
+            ) : alert.class === 'success' ? (
+              <Alert type="success">{alert.mensaje}</Alert>
             ) : (
-              ''
+              <Alert type="warning">{alert.mensaje}</Alert>
             )}
           </div>
           <div className={handles.container}>
