@@ -26,7 +26,7 @@ ejecuta la funcion handleSend la cual permite enviar a la Api la variable email 
 
 
 ## Conclusiones 
-Para obtener estos resultados se estudiaron en la documentación los siguientes link:
+Para obtener los resultados se consultó en la documentación de los siguientes link:
 - [VTEX Styleguide](https://styleguide.vtex.com/#/Components/Forms). 
 - [css-handles](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization)
 - [react-jsonschema](https://react-jsonschema-form.readthedocs.io/en/latest/)
