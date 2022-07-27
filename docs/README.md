@@ -13,17 +13,17 @@ Popup de suscripción para descuento en primera compra: Popup que solicite al us
 ## Configuración
 ![plantilla](https://user-images.githubusercontent.com/70826804/181163089-fdb54df8-97bf-4b78-8187-2abfd50e3b61.png)
 
-Para desarrollar el componente se tuvo en cuenta la configuración del schema en el archivo [schemaSubscription.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/schema/schemaSubscription.ts) se realizó la estructura para que el site editor se presente
-como muestra la siguiente imagen.
+Para desarrollar el componente se tuvo en cuenta la configuración del schema en el archivo [schemaSubscription.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/schema/schemaSubscription.ts) se realizó la estructura para que el site editor, el administrador, lo encontrará se nos muestra en la siguiente imagen.
 
 ![07](https://user-images.githubusercontent.com/70826804/181164000-372b97e6-7a80-47a0-9961-d41edae451b3.png)
 
 Para la implementación del componente se explican los siguientes pasos:
+
 1. Se desarrollo una Clase [Api.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Api/Api.ts) para consultar el EndPonit donde se verifica si el correo digitado esta registrado en la oferta;
 2. Se Implemento un componente [ButtonEmail.tsx](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/ButtonEmail.tsx) que ejecuta las funcion handleChange en el onChange, que permite enviar la variable email al componente padre para sus respectivas validaciones. Tambien, dentro de este componente se
 ejecuta la funcion handleSend la cual permite enviar a la Api la variable email para verificarla en el endpoit, o en el localstore su existencia.
 3. El componente padre contiene todas las variables de inicio, como las funciones principales, [Subscriptions](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/Subscriptions.tsx), 
-
+4.Los componentes anteriores se ubicaron dentro del Modal para persistir en la tienda, hasta que se cerrará la ventana o el cliente tomará la suscripción.
 
 ## Conclusiones 
 Para obtener los resultados se consultó en la documentación de los siguientes link:
