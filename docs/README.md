@@ -13,7 +13,7 @@ Popup de suscripción para descuento en primera compra: Popup que solicite al us
 ## Configuración
 ![plantilla](https://user-images.githubusercontent.com/70826804/181163089-fdb54df8-97bf-4b78-8187-2abfd50e3b61.png)
 
-Para desarrollar el componente se tuvo en cuenta la configuración del schema en el archivo [schemaSubscription.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/schema/schemaSubscription.ts) se realizó la estructura para que el site editor, el administrador, lo encontrará se nos muestra en la siguiente imagen.
+Para desarrollar el Popup de suscripción se tuvo en cuenta la configuración del schema en el archivo [schemaSubscription.ts](https://github.com/holmespinto/reto4_popup_suscribciones/blob/master/react/components/schema/schemaSubscription.ts)  la estructura fue diseñada para que en el Site Editor, el administrador, lo encontrará como se nos muestra en la siguiente imagen.
 
 ![07](https://user-images.githubusercontent.com/70826804/181164000-372b97e6-7a80-47a0-9961-d41edae451b3.png)
 
