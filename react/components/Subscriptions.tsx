@@ -39,7 +39,6 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
     target: { value: eventValue },
   }) => {
     setEmail(eventValue)
-    console.log('alert', eventValue)
   }
 
   // funcion handleCloseModal
@@ -110,7 +109,6 @@ const Subscriptions = ({ porcentaje, image }: ItemsSubscriptions) => {
       ? setModal({ isModalOpen: false })
       : setModal({ isModalOpen: true })
   }, [])
-  console.log('alert.class', alert.class, email)
 
   return (
     <React.Fragment>
